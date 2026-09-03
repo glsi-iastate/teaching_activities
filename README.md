@@ -1,2 +1,2 @@
-# teaching_activities
+# Teaching Activities
 General activities and tools for teaching
