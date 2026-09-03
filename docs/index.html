@@ -176,7 +176,7 @@
         </div>
 
         <div class="row">
-          <label for="silt">Silt (%) (computed)</label>
+          <label for="silt">Silt (%) (calculated)</label>
           <input
             id="silt"
             type="number"
@@ -200,7 +200,16 @@
           <div class="pill">Bottom-left: <b>Sand</b></div>
           <div class="pill">Bottom-right: <b>Silt</b></div>
         </div>
-
+        
+        <div class="row">
+          <label for="fieldcap">Field Capacity (g/cm-3): </label>
+          <input
+            id="fieldcap"
+            type="number"
+            step="0.1"
+            readonly
+          />
+        </div>
       </div>
     </div>
 
@@ -227,6 +236,7 @@
     const siltEl = document.getElementById("silt");
     const statusEl = document.getElementById("status");
     const chartEl = document.getElementById("chart");
+    const field_capEL = document.getElementById("fieldcap");
 
     /*
       Plotly ternary-axis mapping:
@@ -497,9 +507,12 @@
 
       const silt = 100 - clay - sand;
 
+      const field_cap = ((sand/100)*1.65) + ((silt/100)*1.5) + ((clay/100)*1.35)
+
       clayEl.value = fix(clay);
       sandEl.value = fix(sand);
       siltEl.value = fix(silt);
+      field_capEL.value = fix(field_cap);
 
       if (silt < 0 || clay + sand > 100) {
         statusEl.textContent =
