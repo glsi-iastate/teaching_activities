@@ -161,7 +161,7 @@ function update() {
   fieldCapEl.value = fix(fieldCapacity);
   wiltingEL.value = fix(wilting_point);
   availwaterEL.value = fix(available_water);
-  hydroconEL.value = hydraulic_con;
+  hydroconEL.value = fix(hydraulic_con);
   textclassEL.value = textureClass;
 
 
