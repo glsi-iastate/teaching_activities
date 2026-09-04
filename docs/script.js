@@ -148,11 +148,14 @@ function update() {
     (silt / 100) * 1.5 +
     (clay / 100) * 1.35;
 
-  bulkDenEl.value = fix(bulkDensity);
-  textclassEL.value = fix(textureClass);
-  fieldCapEl.value = fix(fieldCapacity);
 
   const textureClass = classify(clay, sand, silt);
+
+  bulkDenEl.value = fix(bulkDensity);
+  fieldCapEl.value = fix(fieldCapacity);
+  textclassEL.value = fix(textureClass);
+
+  
   statusEl.textContent = `OK ✔ Total = ${fix(clay + sand + silt)}%`;
   statusEl.className = "help good";
 
