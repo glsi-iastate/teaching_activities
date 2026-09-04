@@ -203,9 +203,15 @@
         </div> -->
         
         <div class="result-row">
-          <span>Field Capacity (g/cm<sup>3</sup>):</span>
+          <span>Field Capacity (g/cm<sup>3</sup>):   </span>
           <output id="fieldcap">—</output>
         </div>
+
+        <div class="result-row">
+          <span>Bulk Density (g/cm<sup>3</sup>):   </span>
+          <output id="bd">—</output>
+        </div>
+
       </div>
     </div>
 
@@ -232,6 +238,7 @@
     const siltEl = document.getElementById("silt");
     const statusEl = document.getElementById("status");
     const chartEl = document.getElementById("chart");
+    const bulk_denEL = document.getElementById("bd");
     const field_capEL = document.getElementById("fieldcap");
 
     /*
@@ -503,11 +510,19 @@
 
       const silt = 100 - clay - sand;
 
+      porosity = 0.5;
+      // Organic matter temp variable
+      organic_matter = 0;
+      
+      const bulkden = ((clay/100)*(2.4)) + (((silt/100)+(sand/100))*(2.65)) + ((organic_matter/100)*(1.4)); 
+
       const field_cap = ((sand/100)*1.65) + ((silt/100)*1.5) + ((clay/100)*1.35)
+
 
       clayEl.value = fix(clay);
       sandEl.value = fix(sand);
       siltEl.value = fix(silt);
+      bulk_denEL.value = fix(bulkden)
       field_capEL.value = fix(field_cap);
 
       if (silt < 0 || clay + sand > 100) {
