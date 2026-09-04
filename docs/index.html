@@ -203,6 +203,18 @@
           />
         </div>
 
+        <div class="row">
+          <label for="Organic Matter">Organic Matter (%)</label>
+          <input
+            id="sand"
+            type="number"
+            min="0"
+            max="100"
+            step="0.1"
+            value="50"
+          />
+        </div>
+
 
         <div class="row">
           <label for="porosity">Porosity (%)</label>
@@ -270,6 +282,7 @@
     const clayEl = document.getElementById("clay");
     const sandEl = document.getElementById("sand");
     const siltEl = document.getElementById("silt");
+    const OMEL = document.getElementById("om");
     const statusEl = document.getElementById("status");
     const chartEl = document.getElementById("chart");
     const bulk_denEL = document.getElementById("bd");
@@ -552,11 +565,12 @@
       sand = clamp(sand, 0, 100);
 
       const silt = 100 - clay - sand;
-
-      // Organic matter temp variable
-      organic_matter = 0;
       
-      const bulkden = ((clay/100)*(2.4)) + (((silt/100)+(sand/100))*(2.65)) + ((organic_matter/100)*(1.4)); 
+      const bclay = clay/(100 + organic_matter)
+      const bsand = sand/(100 + organic_matter)
+      const bsilt = silt/(100 + organic_matter)
+
+      const bulkden = (porosity/100)(((bclay)*(2.4)) + (((bsilt)+(bsand))*(2.65)) + ((organic_matter/100)*(1.4))); 
 
       const field_cap = ((sand/100)*1.65) + ((silt/100)*1.5) + ((clay/100)*1.35)
 
@@ -566,6 +580,7 @@
       siltEl.value = fix(silt);
       bulk_denEL.value = fix(bulkden)
       field_capEL.value = fix(field_cap);
+      OMEL.value = fix(organic_matter);
 
       if (silt < 0 || clay + sand > 100) {
         statusEl.textContent =
