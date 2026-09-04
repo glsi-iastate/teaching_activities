@@ -13,6 +13,7 @@ const omEl = document.getElementById("om");
 const statusEl = document.getElementById("status");
 const chartEl = document.getElementById("chart");
 const bulkDenEl = document.getElementById("bd");
+const textclassEL = document.getElementById("texClass");
 const fieldCapEl = document.getElementById("fieldcap");
 const porosityEl = document.getElementById("porosity");
 const porosityValueEl = document.getElementById("porosityValue");
@@ -123,6 +124,7 @@ function update() {
   if (silt < 0) {
     fieldCapEl.value = "—";
     bulkDenEl.value = "—";
+    textclassEL.value = "—";
     statusEl.textContent = "Invalid input: Clay + Sand cannot exceed 100%.";
     statusEl.className = "help bad";
     return;
@@ -147,10 +149,11 @@ function update() {
     (clay / 100) * 1.35;
 
   bulkDenEl.value = fix(bulkDensity);
+  textclassEL.value = fix(textureClass);
   fieldCapEl.value = fix(fieldCapacity);
 
   const textureClass = classify(clay, sand, silt);
-  statusEl.textContent = `OK ✔ Total = ${fix(clay + sand + silt)}% — ${textureClass}`;
+  statusEl.textContent = `OK ✔ Total = ${fix(clay + sand + silt)}%`;
   statusEl.className = "help good";
 
   Plotly.restyle(
