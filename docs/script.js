@@ -124,7 +124,7 @@ function update() {
   if (silt < 0) {
     fieldCapEl.value = "—";
     bulkDenEl.value = "—";
-    textclassEL.value = "—";
+    textclassEL = "—";
     statusEl.textContent = "Invalid input: Clay + Sand cannot exceed 100%.";
     statusEl.className = "help bad";
     return;
@@ -153,9 +153,9 @@ function update() {
 
   bulkDenEl.value = fix(bulkDensity);
   fieldCapEl.value = fix(fieldCapacity);
-  textclassEL.value = fix(textureClass);
+  textclassEL = textureClass;
 
-  
+
   statusEl.textContent = `OK ✔ Total = ${fix(clay + sand + silt)}%`;
   statusEl.className = "help good";
 
