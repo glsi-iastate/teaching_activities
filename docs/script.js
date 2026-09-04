@@ -17,6 +17,9 @@ const textclassEL = document.getElementById("texture");
 const fieldCapEl = document.getElementById("fieldcap");
 const porosityEl = document.getElementById("porosity");
 const porosityValueEl = document.getElementById("porosityValue");
+const wiltingEL = document.getElementById("wilting");
+const availwaterEL = document.getElementById("awc");
+const hydroconEL = document.getElementById("HC");
 
 const polygons = [
   { class: "Sand", a: [0, 10, 0, 0], b: [100, 90, 85, 100], c: [0, 0, 15, 0], color: "rgba(255,223,128,0.4)" },
@@ -150,10 +153,16 @@ function update() {
 
   const textureClass = classify(clay, sand, silt);
 
+  const wilting_point = 10;
+  const available_water = 3;
+  const hydraulic_con = 11;
+
   bulkDenEl.value = fix(bulkDensity);
   fieldCapEl.value = fix(fieldCapacity);
   textclassEL.value = textureClass;
-
+  wiltingEL.value = fix(wilting_point);
+  availwaterEL.value = fix(available_water);
+  hydroconEL.value = fix(hydraulic_con);
 
   statusEl.textContent = `OK ✔ Total = ${fix(clay + sand + silt)}% - ${textureClass}`;
   statusEl.className = "help good";
