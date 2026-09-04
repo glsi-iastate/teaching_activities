@@ -159,12 +159,13 @@ function update() {
 
   bulkDenEl.value = fix(bulkDensity);
   fieldCapEl.value = fix(fieldCapacity);
-  textclassEL.value = textureClass;
   wiltingEL.value = fix(wilting_point);
   availwaterEL.value = fix(available_water);
-  hydroconEL.value = fix(hydraulic_con);
+  hydroconEL.value = hydraulic_con;
+  textclassEL.value = textureClass;
 
-  statusEl.textContent = `OK ✔ Total = ${fix(clay + sand + silt)}% - ${textureClass}`;
+
+  statusEl.textContent = `OK ✔ Total = ${fix(clay + sand + silt)}%`;
   statusEl.className = "help good";
 
   Plotly.restyle(
