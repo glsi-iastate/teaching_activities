@@ -90,10 +90,10 @@ function classify(clay, sand, silt) {
   if (clay >= 40 && silt >= 40) return "Silty Clay";
   if (clay >= 35 && sand >= 45) return "Sandy Clay";
   if (clay >= 40) return "Clay";
-  if (clay >= 27.5 && clay < 40 && sand >= 20 && sand < 45 && silt >= 15 && silt < 53) return "Clay Loam";
-  if (clay >= 27.5 && clay < 40 && silt >= 40 && silt < 72.5 && sand < 20) return "Silty Clay Loam";
+  if (clay > 27.5 && clay < 40 && sand >= 20 && sand < 45 && silt >= 15 && silt < 53) return "Clay Loam";
+  if (clay > 27.5 && clay < 40 && silt >= 40 && silt < 72.5 && sand < 20) return "Silty Clay Loam";
   if (clay >= 20 && clay < 35 && sand >= 45 && sand < 65 && silt < 27.5) return "Sandy Clay Loam";
-  if (clay >= 7.5 && clay < 27.5 && silt >= 28 && silt < 50 && sand >= 22.5 && sand < 52.5) return "Loam";
+  if (clay >= 7.5 && clay <= 27.5 && silt >= 28 && silt < 50 && sand >= 22.5 && sand < 52.5) return "Loam";
   if (silt >= 80 && clay < 12) return "Silt";
   if (silt >= 50 && clay < 27) return "Silt Loam";
   if (sand >= 43 && sand < 85 && clay >= 7 && clay < 20 && silt >= 0 && silt < 50) return "Sandy Loam";
