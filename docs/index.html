@@ -566,13 +566,13 @@
 
       const silt = 100 - clay - sand;
       
-      const bclay = clay/(100 + organic_matter)
-      const bsand = sand/(100 + organic_matter)
-      const bsilt = silt/(100 + organic_matter)
+      const bclay = clay/(100 + organic_matter);
+      const bsand = sand/(100 + organic_matter);
+      const bsilt = silt/(100 + organic_matter);
 
       const bulkden = (porosity/100)(((bclay)*(2.4)) + (((bsilt)+(bsand))*(2.65)) + ((organic_matter/100)*(1.4))); 
 
-      const field_cap = ((sand/100)*1.65) + ((silt/100)*1.5) + ((clay/100)*1.35)
+      const field_cap = ((sand/100)*1.65) + ((silt/100)*1.5) + ((clay/100)*1.35);
 
 
       clayEl.value = fix(clay);
