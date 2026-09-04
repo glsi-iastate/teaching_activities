@@ -152,7 +152,7 @@ function update() {
 
   bulkDenEl.value = fix(bulkDensity);
   fieldCapEl.value = fix(fieldCapacity);
-  textclassEL.textContent = textureClass;
+  textclassEL.value = textureClass;
 
 
   statusEl.textContent = `OK ✔ Total = ${fix(clay + sand + silt)}% - ${textureClass}`;
