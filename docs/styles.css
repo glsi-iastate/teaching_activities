@@ -82,7 +82,8 @@ header h1 {
 }
 
 .credit-panel {
-  background-color: #c8102e;
+  background: #c8102e;
+  width: max-content;
 }
 
 .credit-panel h2 {
