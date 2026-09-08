@@ -165,7 +165,7 @@ function update() {
   textclassEL.value = textureClass;
 
 
-  statusEl.textContent = `OK ✔ Total = ${fix(clay + sand + silt)}%`;
+  statusEl.textContent = `Total = ${fix(clay + sand + silt)}%`;
   statusEl.className = "help good";
 
   Plotly.restyle(
