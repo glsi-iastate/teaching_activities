@@ -4,14 +4,19 @@
   --card_rad: 16px;
   --small_rad: 6px;
   --cardinal_red:#c8102e;
+  --cyclone_gold:#f1be48;
   --page_white:#f9f9f9;
+  --input_box_white:#e9e9e9;
+  --page_black:#000000;
+  --page_grey:#333333;
+  --page_border_grey:solid#aaaaaa;
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background:var(--page_white);
-  color:#000;
+  color:var(--page_black);
 }
 
 header {
@@ -22,7 +27,7 @@ header {
   height: auto;
   gap: 12px;
   padding: 20px 24px;
-  border-bottom: 1px solid#ccc;
+  border-bottom: 1px var(--page_border_grey);
   background:var(--cardinal_red);
   position: relative;
 }
@@ -76,7 +81,7 @@ header h1 {
 .card {
   min-height: 760px;
   background:var(--page_white);
-  border: 1px solid#ccc;
+  border: 1px var(--page_border_grey);
   border-radius: var(--card_rad);
 }
 
@@ -143,27 +148,27 @@ header h1 {
 
 label {
   font-size: 14px;
-  color:#333;
+  color:var(--page_grey);
 }
 
 input[type="number"] {
   width: 100%;
   box-sizing: border-box;
   padding: 8px;
-  border: 1px solid#aaa;
+  border: 1px var(--page_border_grey);
   border-radius: var(--small_rad);
   background:var(--page_white);
-  color:#000;
+  color:var(--page_black);
 }
 
 input[readonly] {
-  background:#eee;
+  background:var(--input_box_white);
 }
 
 .help {
   margin-top: 6px;
   font-size: 12px;
-  color:#555;
+  color:var(--page_grey);
 }
 
 .good {
@@ -182,15 +187,15 @@ input[readonly] {
 
 button {
   padding: 8px 12px;
-  border: 1px solid#aaa;
+  border: 1px var(--page_border_grey);
   border-radius: var(--small_rad);
   background:var(--page_white);
-  color:#000;
+  color:var(--page_black);
   cursor: pointer;
 }
 
 button:hover {
-  background:#eee;
+  background:var(--input_box_white);
 }
 
 .slider-control {
@@ -219,7 +224,7 @@ button:hover {
   justify-content: space-between;
   gap: 16px;
   padding: 10px;
-  border: 1px solid#ccc;
+  border: 1px var(--page_border_grey);
   border-radius: var(--small_rad);
   background:var(--page_white);
 }
@@ -251,7 +256,7 @@ button:hover {
 }
 
 #porosityValue {
-  color:#000;
+  color:var(--page_black);
   background-color:var(--page_white);
   padding: 3px 8px;
   border-radius: var(--small_rad);
@@ -261,7 +266,7 @@ button:hover {
 
 #porosity {
   width: 100%;
-  accent-color:#f1be48;
+  accent-color:var(--cyclone_gold);
 }
 
 
