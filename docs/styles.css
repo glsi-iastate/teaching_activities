@@ -49,7 +49,7 @@ header h1 {
   padding: 12px 12px 0;
 }
 
-.porosity-row input{
+#porosityValue {
   color: #fff;
 }
 
