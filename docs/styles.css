@@ -103,6 +103,12 @@ header h1 {
   font-size: 18px;
 }
 
+.credit-panel h4 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 10px;
+}
+
 .credit-panel p {
   margin-top: 0;
   color: #fff;
