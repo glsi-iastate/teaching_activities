@@ -7,13 +7,13 @@ body {
 
 header {
   padding: 20px 24px;
-  color: #ffffff;
   border-bottom: 1px solid #ccc;
   background: #c8102e;
 }
 
 h1 {
   margin: 0;
+  color: #ffffff;
   font-size: 22px;
 }
 
