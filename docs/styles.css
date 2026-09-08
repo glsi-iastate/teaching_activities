@@ -180,6 +180,11 @@ button:hover {
   accent-color: #f1be48;
 }
 
+.header-logo {
+  height: 42px;
+  object-fit: contain;
+}
+
 @media (max-width: 900px) {
   .wrap {
     grid-template-columns: 1fr;
