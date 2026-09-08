@@ -49,17 +49,6 @@ header h1 {
   padding: 12px 12px 0;
 }
 
-.porosity-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.porosity-header label,
-#porosityValue {
-  color: #ffffff;
-}
-
 .row {
   display: grid;
   grid-template-columns: 1fr 120px;
@@ -159,6 +148,36 @@ button:hover {
 #chart {
   width: 100%;
   height: 700px;
+}
+
+
+.porosity-row {
+  margin-top: 14px;
+}
+
+.porosity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.porosity-header label {
+  color: #333;
+}
+
+#porosityValue {
+  color: #c8102e;
+  background-color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+#porosity {
+  width: 100%;
+  accent-color: #c8102e;
 }
 
 @media (max-width: 900px) {
