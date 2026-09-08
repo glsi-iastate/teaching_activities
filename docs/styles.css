@@ -19,7 +19,7 @@ header {
 }
 
 .header-logo-link {
-  position: relative;
+  position: absolute;
   left: 15px;
   height: 64px;
   display: block;
@@ -39,16 +39,21 @@ header h1 {
   text-align: center;
 }
 
-@media (max-width: 600px), (orientation: portrait) {
+@media (max-width: 650px) {
   header {
     flex-direction: column;
-    justify-content: center;
-    padding: 16px;
+    gap: 10px;
+    padding: 14px 20px;
   }
 
   .header-logo-link {
     position: static;
-    height: 48px; 
+    transform: none;
+    height: 54px;
+  }
+
+  header h1 {
+    font-size: 24px;
   }
 }
 
