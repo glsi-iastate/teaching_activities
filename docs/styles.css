@@ -87,13 +87,26 @@ header h1 {
 }
 
 .credit-panel {
+  background: #c8102E;
   padding: 18px;
 }
 
 .credit-panel h2 {
   margin-top: 0;
-  color: #c8102e;
+  color: #fff;
   font-size: 22px;
+}
+
+.credit-panel h3 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+.credit-panel p {
+  margin-top: 0;
+  color: #fff;
+  font-size: 14px;
 }
 
 .panel {
