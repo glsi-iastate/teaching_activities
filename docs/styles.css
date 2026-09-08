@@ -32,8 +32,13 @@ header h1 {
 }
 
 .side-panel {
-  color: #fff;
   background-color: #c8102e;
+}
+
+.side-panel label{
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
 }
 
 .panel {
