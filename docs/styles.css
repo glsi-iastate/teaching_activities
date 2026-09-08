@@ -81,7 +81,7 @@ header h1 {
   font-size: 18px;
 }
 
-.footer {
+footer {
   display: flex;
   align-items: center;
   justify-content: center;
