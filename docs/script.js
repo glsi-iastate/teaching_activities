@@ -197,7 +197,7 @@ document.getElementById("reset").addEventListener("click", () => {
   clayEl.value = 20;
   sandEl.value = 50;
   omEl.value = 0;
-  porosityEl.value = 50;
+  porosityEl.value = 30;
   update();
 });
 
