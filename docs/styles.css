@@ -98,12 +98,12 @@ header h1 {
 .credit-card {
   grid-column: 1 / -1;
   min-height: 0;
-  border-radius: var(--card_rad);
 }
 
 .credit-panel {
   background:var(--cardinal_red);
   padding: 18px;
+  border-radius: var(--card_rad);
 }
 
 .credit-panel h2 {
