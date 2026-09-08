@@ -84,10 +84,11 @@ header h1 {
 .credit-card {
   grid-column: 1 / -1;
   min-height: 0;
+  background:#c8102e
 }
 
 .credit-panel {
-  background: #c8102E;
+  background:#c8102e;
   padding: 18px;
 }
 
