@@ -6,9 +6,24 @@ body {
 }
 
 header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   padding: 20px 24px;
   border-bottom: 1px solid #ccc;
   background: #c8102e;
+}
+
+.header-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: auto;
+  height: 48px;
+  object-fit: contain;
+  display: block;
 }
 
 header h1 {
@@ -180,11 +195,6 @@ button:hover {
   accent-color: #f1be48;
 }
 
-.header-logo {
-  height: 22px;
-  width: auto;
-  object-fit: contain;
-}
 
 @media (max-width: 900px) {
   .wrap {
