@@ -49,6 +49,10 @@ header h1 {
   padding: 12px 12px 0;
 }
 
+.porosity-row input{
+  color: #fff;
+}
+
 .row {
   display: grid;
   grid-template-columns: 1fr 120px;
