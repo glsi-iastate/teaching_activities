@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #fff;
-  color: #000;
+  background:#fff;
+  color:#000;
 }
 
 header {
@@ -13,8 +13,8 @@ header {
   height: auto;
   gap: 12px;
   padding: 20px 24px;
-  border-bottom: 1px solid #ccc;
-  background: #c8102e;
+  border-bottom: 1px solid#ccc;
+  background:#c8102e;
   position: relative;
 }
 
@@ -34,7 +34,7 @@ header {
 
 header h1 {
   margin: 0;
-  color: #fff;
+  color:#fff;
   font-size: 28px;
   text-align: center;
 }
@@ -66,8 +66,8 @@ header h1 {
 
 .card {
   min-height: 760px;
-  background: #f9f9f9;
-  border: 1px solid #ccc;
+  background:#f9f9f9;
+  border: 1px solid#ccc;
   border-radius: 16px;
 }
 
@@ -77,42 +77,41 @@ header h1 {
 
 .side-panel label{
   margin: 0;
-  color: #fff;
+  color:#fff;
   font-size: 18px;
 }
 
 .credit-card {
   grid-column: 1 / -1;
   min-height: 0;
-  background:#c8102e
 }
 
 .credit-panel {
-  background:#c8102e;
+  background:#f1be48;
   padding: 18px;
 }
 
 .credit-panel h2 {
   margin-top: 0;
-  color: #fff;
+  color:#fff;
   font-size: 22px;
 }
 
 .credit-panel h3 {
   margin-top: 0;
-  color: #fff;
+  color:#fff;
   font-size: 18px;
 }
 
 .credit-panel h4 {
   margin-top: 0;
-  color: #fff;
+  color:#fff;
   font-size: 10px;
 }
 
 .credit-panel p {
   margin-top: 0;
-  color: #fff;
+  color:#fff;
   font-size: 14px;
 }
 
@@ -134,35 +133,35 @@ header h1 {
 
 label {
   font-size: 14px;
-  color: #333;
+  color:#333;
 }
 
 input[type="number"] {
   width: 100%;
   box-sizing: border-box;
   padding: 8px;
-  border: 1px solid #aaa;
+  border: 1px solid#aaa;
   border-radius: 6px;
-  background: #fff;
-  color: #000;
+  background:#fff;
+  color:#000;
 }
 
 input[readonly] {
-  background: #eee;
+  background:#eee;
 }
 
 .help {
   margin-top: 6px;
   font-size: 12px;
-  color: #555;
+  color:#555;
 }
 
 .good {
-  color: #c8102e;
+  color:#c8102e;
 }
 
 .bad {
-  color: #fff;
+  color:#fff;
 }
 
 .btns {
@@ -173,15 +172,15 @@ input[readonly] {
 
 button {
   padding: 8px 12px;
-  border: 1px solid #aaa;
+  border: 1px solid#aaa;
   border-radius: 6px;
-  background: #fff;
-  color: #000;
+  background:#fff;
+  color:#000;
   cursor: pointer;
 }
 
 button:hover {
-  background: #eee;
+  background:#eee;
 }
 
 .slider-control {
@@ -210,9 +209,9 @@ button:hover {
   justify-content: space-between;
   gap: 16px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid#ccc;
   border-radius: 6px;
-  background: #fff;
+  background:#fff;
 }
 
 .result-row output {
@@ -238,12 +237,12 @@ button:hover {
 }
 
 .porosity-header label {
-  color: #fff;
+  color:#fff;
 }
 
 #porosityValue {
-  color: #000;
-  background-color: #fff;
+  color:#000;
+  background-color:#fff;
   padding: 3px 8px;
   border-radius: 4px;
   font-weight: 700;
@@ -252,7 +251,7 @@ button:hover {
 
 #porosity {
   width: 100%;
-  accent-color: #f1be48;
+  accent-color:#f1be48;
 }
 
 
