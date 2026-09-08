@@ -81,14 +81,18 @@ header h1 {
   font-size: 18px;
 }
 
+.credit-card {
+  grid-column: 1 / -1;
+  min-height: 0;
+}
+
 .credit-panel {
-  background: #c8102e;
-  width: max-content;
+  padding: 18px;
 }
 
 .credit-panel h2 {
-  margin: 0;
-  color: #fff;
+  margin-top: 0;
+  color: #c8102e;
   font-size: 22px;
 }
 
