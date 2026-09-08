@@ -31,9 +31,12 @@ header h1 {
   border-radius: 8px;
 }
 
+.side-panel {
+  background-color: #c8102e;
+}
+
 .panel {
   padding: 18px;
-  background: #c8102e;
 }
 
 .chart-panel {
