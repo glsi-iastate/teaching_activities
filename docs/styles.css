@@ -19,9 +19,9 @@ header {
 }
 
 .header-logo-link {
-  position: absolute;
+  position: relative;
   left: 15px;
-  height: 44px;
+  height: 100%;
   display: block;
 }
 
