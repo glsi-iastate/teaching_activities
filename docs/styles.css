@@ -49,8 +49,15 @@ header h1 {
   padding: 12px 12px 0;
 }
 
+.porosity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.porosity-header label,
 #porosityValue {
-  color: #fff;
+  color: #ffffff;
 }
 
 .row {
