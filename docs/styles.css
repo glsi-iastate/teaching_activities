@@ -10,6 +10,7 @@
   --page_black:#000000;
   --page_grey:#333333;
   --page_border_grey:solid#aaaaaa;
+  --card_padding:16px;
 }
 
 body {
@@ -75,7 +76,7 @@ header h1 {
   display: grid;
   grid-template-columns: 350px minmax(0, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: var(--card_padding);
 }
 
 .card {
@@ -102,7 +103,7 @@ header h1 {
 
 .credit-panel {
   background:var(--cardinal_red);
-  padding: 18px;
+  padding: var(--card_padding);
   border-radius: var(--card_rad);
 }
 
@@ -131,7 +132,7 @@ header h1 {
 }
 
 .panel {
-  padding: 18px;
+  padding: var(--card_padding);
 }
 
 .chart-panel {
