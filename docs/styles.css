@@ -9,7 +9,7 @@
   --input_box_white:#e9e9e9;
   --page_black:#000000;
   --page_grey:#333333;
-  --page_border_grey:solid#aaaaaa;
+  --page_item_border:solid#524727;
   --card_padding:10px;
   --page_brown:#9b945f;
   --page_dark_brown:#524727;
@@ -30,7 +30,7 @@ header {
   height: auto;
   gap: 12px;
   padding: 20px 24px;
-  border-bottom: 1px var(--page_border_grey);
+  border-bottom: 1px var(--page_item_border);
   background:var(--cardinal_red);
   position: relative;
 }
@@ -84,7 +84,7 @@ header h1 {
 .card {
   min-height: 760px;
   background:var(--page_white);
-  border: 1px var(--page_border_grey);
+  border: 1px var(--page_item_border);
   border-radius: var(--card_rad);
 }
 
@@ -158,7 +158,7 @@ input[type="number"] {
   width: 100%;
   box-sizing: border-box;
   padding: 8px;
-  border: 1px var(--page_border_grey);
+  border: 1px var(--page_item_border);
   border-radius: var(--small_rad);
   background:var(--page_white);
   color:var(--page_black);
@@ -190,7 +190,7 @@ input[readonly] {
 
 button {
   padding: 8px 12px;
-  border: 1px var(--page_border_grey);
+  border: 1px var(--page_item_border);
   border-radius: var(--small_rad);
   background:var(--page_white);
   color:var(--page_black);
@@ -227,7 +227,7 @@ button:hover {
   justify-content: space-between;
   gap: 16px;
   padding: 10px;
-  border: 1px var(--page_border_grey);
+  border: 1px var(--page_item_border);
   border-radius: var(--small_rad);
   background:var(--page_white);
 }
