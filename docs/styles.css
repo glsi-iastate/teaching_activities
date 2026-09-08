@@ -18,7 +18,7 @@ header {
 .header-logo-link {
   position: absolute;
   left: 15px;
-  height: 48px;
+  height: 58px;
   display: block;
 }
 
@@ -32,7 +32,7 @@ header {
 header h1 {
   margin: 0;
   color: #fff;
-  font-size: 22px;
+  font-size: 28px;
 }
 
 .wrap {
