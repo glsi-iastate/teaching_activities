@@ -83,11 +83,11 @@ input[readonly] {
 }
 
 .good {
-  color: green;
+  color: #c8102e;
 }
 
 .bad {
-  color: red;
+  color: #fff;
 }
 
 .btns {
