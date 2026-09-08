@@ -157,6 +157,19 @@ function update() {
   const available_water = 3;
   const hydraulic_con = 11;
 
+  const ratioInput = porosity/100;
+  const outerSquare = document.getElementById("outerSquare");
+
+  function updateSquares() {
+    // Keep the value in a sensible range: 0 to 1.
+    const ratio = Math.max(0, Math.min(1, Number(ratioInput.value) || 0));
+
+    // Pass the ratio into CSS.
+    outerSquare.style.setProperty("--square-ratio", ratio);
+  }
+
+  ratioInput.addEventListener("input", updateSquares);
+
   bulkDenEl.value = fix(bulkDensity);
   fieldCapEl.value = fix(fieldCapacity);
   wiltingEL.value = fix(wilting_point);
