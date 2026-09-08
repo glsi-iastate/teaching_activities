@@ -272,46 +272,6 @@ button:hover {
   accent-color:var(--cyclone_gold);
 }
 
-.outer-square {
-  /* Change this to whatever fixed/display size you need. */
-  width: 360px;
-  aspect-ratio: 1;
-
-  box-sizing: border-box;
-  border: 3px solid black;
-  background: white;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-
-  /* The input-controlled value. */
-  --square-ratio: 1;
-}
-
-.inner-square {
-  /*
-    Each grid cell is one third of the available outer square.
-
-    At ratio 1:
-      - each brown square fills its cell
-      - together, the 3x3 squares fill the outer square
-
-    At ratio 0.5:
-      - each brown square is half the width and height of its cell
-      - its center remains in the same position
-  */
-  width: calc(100% * var(--square-ratio));
-  aspect-ratio: 1;
-
-  box-sizing: border-box;
-  justify-self: center;
-  align-self: center;
-
-  background: var(--page_brown);
-  border: 2px solid var(--pag_dark_brown);
-}
-
 @media (max-width: 900px) {
   .wrap {
     grid-template-columns: 1fr;
