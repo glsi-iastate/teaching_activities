@@ -10,6 +10,7 @@ const clayEl = document.getElementById("clay");
 const sandEl = document.getElementById("sand");
 const siltEl = document.getElementById("silt");
 const omEl = document.getElementById("om");
+const surfdepthEl = document.getElementById("surf_depth");
 const statusEl = document.getElementById("status");
 const chartEl = document.getElementById("chart");
 const bulkDenEl = document.getElementById("bd");
@@ -106,6 +107,7 @@ function update() {
   let clay = parseFloat(clayEl.value);
   let sand = parseFloat(sandEl.value);
   let organicMatter = parseFloat(omEl.value);
+  let surfdepth = parseFloat(surfdepthEl.value);
   const porosity = parseFloat(porosityEl.value);
 
   if (!Number.isFinite(clay)) clay = 0;
@@ -122,6 +124,7 @@ function update() {
   sandEl.value = fix(sand);
   siltEl.value = fix(silt);
   omEl.value = fix(organicMatter);
+  surfdepthEl.value = fix(surfdepth);
   porosityValueEl.textContent = fix(porosity);
 
   if (silt < 0) {
