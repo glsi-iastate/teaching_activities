@@ -191,8 +191,12 @@ porosityEl.addEventListener("input", update);
 document.getElementById("snap").addEventListener("click", () => {
   const clay = parseFloat(clayEl.value);
   const sand = parseFloat(sandEl.value);
+  const organicmatter = parseFloat(omEl.value);
+  const porosity = parseFloat(porosityEl.value);
   clayEl.value = Math.round(Number.isFinite(clay) ? clay : 0);
   sandEl.value = Math.round(Number.isFinite(sand) ? sand : 0);
+  omEl.value = Math.round(Number.isFinite(organicmatter) ? organicmatter : 0);
+  porosityEl.value = Math.round(Number.isFinite(porosity) ? porosity : 0);
   update();
 });
 
