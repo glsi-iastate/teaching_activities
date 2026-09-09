@@ -148,17 +148,32 @@ function update() {
 
   const bulkDensity = particleDensity * (1 - porosity / 100);
 
-  const fieldCapacity =
-    (sand / 100) * 1.65 +
-    (silt / 100) * 1.5 +
-    (clay / 100) * 1.35;
+  // const fieldCapacity =
+  //   (sand / 100) * 1.65 +
+  //   (silt / 100) * 1.5 +
+  //   (clay / 100) * 1.35;
+
+  const a_fc = 0.2576;
+  const b_fc = -0.0020;
+  const c_fc = 0.0014;
+  const d_fc = 0.0036;
+  const e_fc = 0.0299;
+
+  const fieldCapacity = (a_fc * bSand) + (b_fc * bSilt) + (c_fc * bClay) + (d_fc * organicMatterFraction) + (e_fc * bulkDensity);
+
+  const a_wp = 0.0260;
+  const b_wp = -0.0016;
+  const c_wp = 0.005;
+  const d_wp = 0.0050;
+  const e_wp = 0.0158;
+
+  const wilting_point = (a_wp * bSand) + (b_wp * bSilt) + (c_wp * bClay) + (d_wp * organicMatterFraction) + (e_wp * bulkDensity);
 
 
   const textureClass = classify(clay, sand, silt);
 
-  const wilting_point = 10;
-  const available_water = 3;
-  const hydraulic_con = 11;
+  const available_water = fieldCapacity - wilting_point;
+  const hydraulic_con = 12;
 
   bulkDenEl.value = fix(bulkDensity);
   fieldCapEl.value = fix(fieldCapacity);
