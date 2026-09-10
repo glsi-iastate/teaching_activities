@@ -176,7 +176,7 @@ function update() {
 
 
   const k_exponent = 12.012 + ((-7.55e-2)* bSand) + ((-3.8950)+((3.671e-2)* bSand) + ((-0.1103) * bClay) + ((8.7546e-4) * bClay * bClay)) * (available_water);
-  const hydraulic_con = (((2.778e-6) * Math.exp(k_exponent)) * 10000);
+  const hydraulic_con = (((2.778e-6) * Math.exp(k_exponent)));
 
   bulkDenEl.value = fix(bulkDensity);
   fieldCapEl.value = fix(fieldCapacity);
