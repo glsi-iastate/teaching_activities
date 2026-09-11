@@ -160,8 +160,8 @@ const layout = {
       x: 0.75,
       y: 0.50,
       angle: 0,
-      arrowDx: 30,
-      arrowDy: -52
+      arrowDx: 20,
+      arrowDy: -34.64
     }),
 
     // Sand vertex.
@@ -170,12 +170,12 @@ const layout = {
       x: 0.50,
       y: -0.06,
       angle: 0,
-      arrowDx: 30,
-      arrowDy: 52
+      arrowDx: 20,
+      arrowDy: 34.64
     }),
   ],
 
-  margin: { l: 55, r: 55, t: 55, b: 85 },
+  margin: { l: 55, r: 55, t: 55, b: 75 },
   showlegend: false
 };
 
