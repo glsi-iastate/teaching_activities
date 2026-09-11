@@ -150,7 +150,7 @@ const layout = {
       x: 0.35,
       y: 0.50,
       angle: 0,
-      arrowDx: -45,
+      arrowDx: -60,
       arrowDy: 0
     }),
 
