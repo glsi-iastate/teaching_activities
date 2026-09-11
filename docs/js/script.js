@@ -66,19 +66,133 @@ const pointTrace = {
     "Texture Class: %{text}<extra></extra>"
 };
 
+
+const axisLabel = ({
+  text,
+  x, y,              // label center, in ternary-local paper coordinates
+  angle,             // degrees: text orientation
+  arrowDx, arrowDy,  // arrow direction in pixels
+  color = "#222"
+}) => ({
+  // Ternary-local coordinates:
+  // x: 0 = left triangle edge, 1 = right triangle edge
+  // y: 0 = bottom, 1 = apex
+  xref: "ternary",
+  yref: "ternary",
+  x,
+  y,
+
+  text: `<b>${text}</b>`,
+  showarrow: true,
+
+  // Rotates only the text label.
+  textangle: angle,
+
+  // Position label relative to arrow tail.
+  xanchor: "center",
+  yanchor: "middle",
+  align: "center",
+
+  font: {
+    size: 16,
+    color
+  },
+
+  // Arrow endpoint is at (x, y); ax/ay offset the tail in pixels.
+  // The label sits near the tail, leaving the arrow beneath it.
+  ax: arrowDx,
+  ay: arrowDy,
+  axref: "pixel",
+  ayref: "pixel",
+
+  arrowhead: 3,
+  arrowsize: 1.1,
+  arrowwidth: 2,
+  arrowcolor: color,
+
+  // Optional whitespace so the arrow does not touch the text.
+  standoff: 5,
+  borderpad: 2,
+  bgcolor: "rgba(255,255,255,0.72)"
+});
+
+
 const layout = {
   paper_bgcolor: "#fff",
   plot_bgcolor: "#fff",
   dragmode: false,
+
   ternary: {
     sum: 100,
-    aaxis: { title: { text: "Clay" }, min: 0, ticksuffix: "%" },
-    baxis: { title: { text: "Sand" }, min: 0, ticksuffix: "%" },
-    caxis: { title: { text: "Silt" }, min: 0, ticksuffix: "%" }
+
+    // Keep tick labels but remove Plotly's default outer axis titles.
+    aaxis: {
+      title: { text: "" },
+      min: 0,
+      ticksuffix: "%"
+    },
+    baxis: {
+      title: { text: "" },
+      min: 0,
+      ticksuffix: "%"
+    },
+    caxis: {
+      title: { text: "" },
+      min: 0,
+      ticksuffix: "%"
+    }
   },
+
+  annotations: [
+    // Clay: direction is toward the top apex.
+    axisLabel({
+      text: "Clay (%)",
+      x: 0.50,
+      y: 0.58,
+      angle: 0,
+      arrowDx: 0,
+      arrowDy: 55
+    }),
+
+    // Sand: direction runs down-left toward the Sand vertex.
+    axisLabel({
+      text: "Sand (%)",
+      x: 0.66,
+      y: 0.27,
+      angle: -60,
+      arrowDx: 48,
+      arrowDy: -28
+    }),
+
+    // Silt: direction runs down-right toward the Silt vertex.
+    axisLabel({
+      text: "Silt (%)",
+      x: 0.34,
+      y: 0.27,
+      angle: 60,
+      arrowDx: -48,
+      arrowDy: -28
+    })
+  ],
+
   margin: { l: 55, r: 55, t: 55, b: 55 },
   showlegend: false
 };
+
+
+// const layout = {
+//   paper_bgcolor: "#fff",
+//   plot_bgcolor: "#fff",
+//   dragmode: false,
+//   ternary: {
+//     sum: 100,
+//     aaxis: { title: { text: "Clay" }, min: 0, ticksuffix: "%" },
+//     baxis: { title: { text: "Sand" }, min: 0, ticksuffix: "%" },
+//     caxis: { title: { text: "Silt" }, min: 0, ticksuffix: "%" }
+//   },
+//   margin: { l: 55, r: 55, t: 55, b: 55 },
+//   showlegend: false
+// };
 
 const plotConfig = {
   scrollZoom: false,
