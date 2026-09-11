@@ -144,17 +144,17 @@ const layout = {
   },
 
   annotations: [
-    // Clay: direction is toward the top apex.
+    // Clay Vertex
     axisLabel({
       text: "Clay (%)",
       x: 0.50,
       y: 0.40,
-      angle: -90,
+      angle: 0,
       arrowDx: 55,
       arrowDy: 0
     }),
 
-    // Sand: direction runs down-left toward the Sand vertex.
+    // Silt vertex.
     axisLabel({
       text: "Silt (%)",
       x: 0.66,
@@ -164,15 +164,15 @@ const layout = {
       arrowDy: -25
     }),
 
-    // Silt: direction runs down-right toward the Silt vertex.
+    // Sand vertex.
     axisLabel({
       text: "Sand (%)",
-      x: 0.34,
-      y: 0.27,
-      angle: 60,
-      arrowDx: -25,
-      arrowDy: 43
-    })
+      x: 0.50,
+      y: -0.06,
+      angle: -60,
+      arrowDx: 45,
+      arrowDy: 78
+    }),
   ],
 
   margin: { l: 55, r: 55, t: 55, b: 55 },
