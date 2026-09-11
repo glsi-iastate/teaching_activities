@@ -285,3 +285,7 @@ button:hover {
     height: 600px;
   }
 }
+
+h3 a {
+  color: inherit;
+}
