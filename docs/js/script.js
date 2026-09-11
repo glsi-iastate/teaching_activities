@@ -150,7 +150,7 @@ const layout = {
       x: 0.35,
       y: 0.50,
       angle: 0,
-      arrowDx: -60,
+      arrowDx: -50,
       arrowDy: 0
     }),
 
@@ -160,8 +160,8 @@ const layout = {
       x: 0.65,
       y: 0.50,
       angle: 0,
-      arrowDx: 43,
-      arrowDy: -25
+      arrowDx: 40,
+      arrowDy: -30
     }),
 
     // Sand vertex.
@@ -170,8 +170,8 @@ const layout = {
       x: 0.50,
       y: -0.06,
       angle: 0,
-      arrowDx: 45,
-      arrowDy: 25
+      arrowDx: 40,
+      arrowDy: 30
     }),
   ],
 
