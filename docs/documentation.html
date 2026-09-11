@@ -17,10 +17,38 @@
     <div class="doc-content">
       <section id="details" class="section-text">
           <div>
-            <div class="md-content" data-md="soil_triangle/documentation.md"></div>
+            <div class="md-content" data-md="soil_triangle\documentation.md"></div>
           </div>
       </section>
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        const containers = document.querySelectorAll("[data-md]");
+
+        for (const container of containers) {
+        const markdownFile = container.dataset.md;
+
+        try {
+            const response = await fetch(markdownFile);
+
+            if (!response.ok) {
+            throw new Error(`Could not load ${markdownFile}: ${response.status}`);
+            }
+
+            const markdown = await response.text();
+            container.innerHTML = marked.parse(markdown);
+        } catch (error) {
+            console.error(error);
+            container.textContent = `Failed to load documentation: ${error.message}`;
+        }
+        }
+    });
+    </script>
+
 
 </body>
 
