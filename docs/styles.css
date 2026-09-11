@@ -289,3 +289,18 @@ button:hover {
 h2 a {
   color: inherit;
 }
+
+
+.section-text {
+  color: #000000;
+}
+.section-text h2,
+.section-text h3,
+.section-text p {
+  margin-bottom: .75em;
+}
+.section-text ul {
+  margin-left: 1.5em;    /* indent */
+  list-style: disc;
+  color: #000000;           /* or whatever text color you’re using */
+}
