@@ -148,30 +148,30 @@ const layout = {
     axisLabel({
       text: "Clay (%)",
       x: 0.50,
-      y: 0.58,
-      angle: 0,
-      arrowDx: 0,
-      arrowDy: 55
+      y: 0.40,
+      angle: -90,
+      arrowDx: 55,
+      arrowDy: 0
     }),
 
     // Sand: direction runs down-left toward the Sand vertex.
     axisLabel({
-      text: "Sand (%)",
+      text: "Silt (%)",
       x: 0.66,
       y: 0.27,
       angle: -60,
-      arrowDx: 48,
-      arrowDy: -28
+      arrowDx: 43,
+      arrowDy: -25
     }),
 
     // Silt: direction runs down-right toward the Silt vertex.
     axisLabel({
-      text: "Silt (%)",
+      text: "Sand (%)",
       x: 0.34,
       y: 0.27,
       angle: 60,
-      arrowDx: -48,
-      arrowDy: -28
+      arrowDx: -25,
+      arrowDy: 43
     })
   ],
 
