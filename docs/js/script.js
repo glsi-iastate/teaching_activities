@@ -147,19 +147,19 @@ const layout = {
     // Clay Vertex
     axisLabel({
       text: "Clay (%)",
-      x: 0.50,
-      y: 0.40,
+      x: 0.16,
+      y: 0.50,
       angle: 0,
-      arrowDx: 55,
+      arrowDx: -90,
       arrowDy: 0
     }),
 
     // Silt vertex.
     axisLabel({
       text: "Silt (%)",
-      x: 0.66,
-      y: 0.27,
-      angle: -60,
+      x: 0.84,
+      y: 0.50,
+      angle: 0,
       arrowDx: 43,
       arrowDy: -25
     }),
@@ -169,9 +169,9 @@ const layout = {
       text: "Sand (%)",
       x: 0.50,
       y: -0.06,
-      angle: -60,
+      angle: 0,
       arrowDx: 45,
-      arrowDy: 78
+      arrowDy: 25
     }),
   ],
 
