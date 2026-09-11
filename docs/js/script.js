@@ -150,7 +150,7 @@ const layout = {
       x: 0.35,
       y: 0.50,
       angle: 0,
-      arrowDx: -50,
+      arrowDx: -60,
       arrowDy: 0
     }),
 
@@ -160,7 +160,7 @@ const layout = {
       x: 0.65,
       y: 0.50,
       angle: 0,
-      arrowDx: 40,
+      arrowDx: 52,
       arrowDy: -30
     }),
 
@@ -170,7 +170,7 @@ const layout = {
       x: 0.50,
       y: -0.06,
       angle: 0,
-      arrowDx: 40,
+      arrowDx: 52,
       arrowDy: 30
     }),
   ],
