@@ -292,11 +292,11 @@ function update() {
   const k_exponent = 12.012 + ((-7.55e-2)* bSand) + ((-3.8950)+((3.671e-2)* bSand) + ((-0.1103) * bClay) + ((8.7546e-4) * bClay * bClay)) * (available_water);
   const hydraulic_con = (((2.778e-6) * Math.exp(k_exponent)));
 
-  bulkDenEl.value = fix(bulkDensity);
-  fieldCapEl.value = fix(fieldCapacity);
-  wiltingEL.value = fix(wilting_point);
-  availwaterEL.value = fix(available_water);
-  hydroconEL.value = fix(hydraulic_con);
+  bulkDenEl.value = bulkDensity.toFixed(4);
+  fieldCapEl.value = fieldCapacity.toFixed(4);
+  wiltingEL.value = wilting_point.toFixed(4);
+  availwaterEL.value = available_water.toFixed(4);
+  hydroconEL.value = hydraulic_con.toFixed(4);
   textclassEL.value = textureClass;
 
 
